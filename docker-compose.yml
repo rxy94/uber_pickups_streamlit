@@ -1,0 +1,7 @@
+services:
+  app:
+    build: . # creamos la imagen a partir de un Dockerfile que se encuentra en el mismo dir
+    ports:
+      - "8501:8501" # mapeamos el puerto 8501(derecha) de la máquina virtual al puerto 8501(izquierda) del host
+    volumes:
+      - ./src:/app # montamos/mapeamos el directorio actual en /app dentro de la máquina virtual
